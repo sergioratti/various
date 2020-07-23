@@ -1,0 +1,23 @@
+config:
+    target: 'http://localhost:3000'
+    payload:
+      path: "../users.csv"
+      fields:
+        - "username"
+        - "password"
+      skipHeader: true
+      order: 'sequence'
+    phases:
+     - duration: 60
+       arrivalRate: 4
+    defaults:
+      headers:
+        Content-Type: "application/json"
+scenarios:
+  - flow:
+    - post:
+        url: /api/users/login
+        json:
+              username: "{{ username }}"
+              password: "{{ password }}"
+  
