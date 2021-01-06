@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bentley-ottman-sweepline": "^0.1.4",
     "d3-delaunay": "^5.2.1",
     "flo-mat": "^1.0.4",
